@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+    --color-orange-400: #E17052;
+
+    --color-green-200: #9FE8DF;
+    --color-green-400: hsl(172, 67%, 45%);
+    --color-green-900: hsl(183, 100%, 15%);
+
+    --color-grey-500: hsl(186, 14%, 43%);
+    --color-grey-600: #3d6666;
+    --color-grey-400: hsl(184, 14%, 56%);
+    --color-grey-300: #9EBBBD;
+    --color-grey-200: hsl(185, 41%, 84%);
+    --color-grey-50: hsl(189, 47%, 97%);
+    --color-white: hsl(0, 100%, 100%);
+
+    --text-sm: 0.8125rem;
+    --text-base: 1rem;
+    --text-md: 1.25rem;
+    --text-lg: 1.5rem;
+    --text-xl: 2rem;
+    --text-2xl: 3rem;
+
+    --leading-sm: 19px;
+    --leading-base: 24px;
+    --leading-md: 30px;
+    --leading-lg: 36px;
+    --leading-xl: 47px;
+    --leading-2xl: 71px;
+
+
+    --font-Space-Mono: "Space Mono", monospace;
+
+    --breakpoint-md: 48rem;
+    --breakpoint-lg: 70rem;
+    --breakpoint-xl: 90rem;
+
+}
+
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: var(--font-Space-Mono);
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    background: var(--color-grey-200);
+}
+
+
+/* h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1;
+} */
+
+
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
