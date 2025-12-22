@@ -55,11 +55,6 @@ export default function Input({ label }: { label: string }) {
           onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
             handleCalculationsOnInput(e);
           }}
-          onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-            if (e.key === "Enter") {
-              handleCalculationsOnInput(e);
-            }
-          }}
           required
         />
         <img

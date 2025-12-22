@@ -58,16 +58,8 @@ export default function TipShare() {
             onSelect={(e: React.FocusEvent<HTMLInputElement>) => {
               handleCustomTip(e);
             }}
-            onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
-              handleCustomTip(e);
-            }}
             onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
               handleCustomTip(e);
-            }}
-            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-              if (e.key === "Enter") {
-                handleCustomTip(e);
-              }
             }}
           />
         </li>
