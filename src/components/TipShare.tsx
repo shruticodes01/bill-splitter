@@ -21,7 +21,7 @@ export default function TipShare() {
               key={tip}
             >
               <Button
-                className={`w-full h-12 text-lg leading-lg ${
+                className={`w-full h-12 ${
                   tip === activeTip
                     ? "bg-grey-200 text-green-900"
                     : "bg-green-900 text-white"
@@ -37,7 +37,7 @@ export default function TipShare() {
         <li className="w-full max-md:max-w-36.75 md:max-lg:max-w-34.5 lg:max-w-29">
           <label className="w-full max-w-fit" htmlFor="custom">
             <Button
-              className="w-full h-12 text-lg leading-lg"
+              className="w-full h-12"
               label={""}
               variant="custom"
               onClick={() => {

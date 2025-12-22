@@ -40,7 +40,6 @@ export default function Input({ label }: { label: string }) {
               : userInput.totalPersons.toString()
           }
           placeholder="0"
-          pattern="[0-9]"
           onChange={onInputChange}
           onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
             const inputTargetValue = Number(e.currentTarget.value);
