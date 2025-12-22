@@ -24,3 +24,7 @@ export interface TipSplitterContextType {
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onReset: () => void;
 }
+
+export type InputEvent =
+  | React.FocusEvent<HTMLInputElement>
+  | React.KeyboardEvent<HTMLInputElement>;

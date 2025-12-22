@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { TipSplitterContext } from "../store/tip-calc-context.tsx";
 import dollarIcon from "../assets/icon-dollar.svg";
 import personIcon from "../assets/icon-person.svg";
+import type { InputEvent } from "../types.ts";
 
 export default function Input({ label }: { label: string }) {
   const { error, userInput, activeTip, onCompute, onInputChange } =
@@ -10,6 +11,13 @@ export default function Input({ label }: { label: string }) {
   const isBill = label === "Bill";
   const name = isBill ? "billAmount" : "totalPersons";
   const errorMessage = error?.[name];
+
+  const handleCalculationsOnInput = function (e: InputEvent) {
+    const inputTargetValue = Number(e.currentTarget.value);
+    if (activeTip && inputTargetValue) {
+      onCompute(activeTip);
+    }
+  };
 
   return (
     <div className="w-full flex flex-col gap-2">
@@ -42,25 +50,14 @@ export default function Input({ label }: { label: string }) {
           placeholder="0"
           onChange={onInputChange}
           onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
-            const inputTargetValue = Number(e.currentTarget.value);
-            if (activeTip && inputTargetValue) {
-              onInputChange(e);
-              onCompute(activeTip);
-            }
+            handleCalculationsOnInput(e);
           }}
           onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
-            const inputTargetValue = Number(e.currentTarget.value);
-
-            if (activeTip && inputTargetValue) {
-              onCompute(activeTip);
-            }
+            handleCalculationsOnInput(e);
           }}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
             if (e.key === "Enter") {
-              const inputTargetValue = Number(e.currentTarget.value);
-              if (activeTip && inputTargetValue) {
-                onCompute(activeTip);
-              }
+              handleCalculationsOnInput(e);
             }
           }}
           required
