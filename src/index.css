@@ -24,12 +24,12 @@
     --text-xl: 2rem;
     --text-2xl: 3rem;
 
-    --leading-sm: 19px;
-    --leading-base: 24px;
-    --leading-md: 30px;
-    --leading-lg: 36px;
-    --leading-xl: 47px;
-    --leading-2xl: 71px;
+    --leading-sm: 1.1875rem;
+    --leading-base: 1.5rem;
+    --leading-md: 1.875rem;
+    --leading-lg: 2.25rem;
+    --leading-xl: 2.9375rem;
+    --leading-2xl: 4.4375rem;
 
 
     --font-Space-Mono: "Space Mono", monospace;

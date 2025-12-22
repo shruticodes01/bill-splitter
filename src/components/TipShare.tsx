@@ -47,37 +47,39 @@ export default function TipShare() {
                 }
               }}
             >
-              <input
-                ref={customInputRef}
-                className="w-full max-w-fit h-12 text-lg leading-lg font-semibold bg-grey-50 text-green-900 text-center placeholder:text-grey-500 focus:outline-2 focus:outline-green-400 -outline-offset-2 rounded-[.3125rem]"
-                type="number"
-                inputMode="numeric"
-                id="custom"
-                name="custom"
-                value={userInput.custom?.toString() ?? ""}
-                placeholder="Custom"
-                onChange={onInputChange}
-                onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
-                  const customTipValue = Number(e.currentTarget.value);
-                  if (!isNaN(customTipValue) && customTipValue > 0) {
-                    onTipSelect(customTipValue);
-                  }
-                }}
-                onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                  const customTipValue = Number(e.currentTarget.value);
-                  if (!isNaN(customTipValue) && customTipValue > 0) {
-                    onTipSelect(customTipValue);
-                  }
-                }}
-                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                  if (e.key === "Enter") {
+              <span className="w-full h-12">
+                <input
+                  ref={customInputRef}
+                  className="w-full max-w-fit h-12 text-lg leading-lg font-semibold bg-grey-50 text-green-900 text-center placeholder:text-grey-500 focus:outline-2 focus:outline-green-400 -outline-offset-2 rounded-[.3125rem]"
+                  type="number"
+                  inputMode="numeric"
+                  id="custom"
+                  name="custom"
+                  value={userInput.custom?.toString() ?? ""}
+                  placeholder="Custom"
+                  onChange={onInputChange}
+                  onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
                     const customTipValue = Number(e.currentTarget.value);
                     if (!isNaN(customTipValue) && customTipValue > 0) {
                       onTipSelect(customTipValue);
                     }
-                  }
-                }}
-              />
+                  }}
+                  onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                    const customTipValue = Number(e.currentTarget.value);
+                    if (!isNaN(customTipValue) && customTipValue > 0) {
+                      onTipSelect(customTipValue);
+                    }
+                  }}
+                  onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                    if (e.key === "Enter") {
+                      const customTipValue = Number(e.currentTarget.value);
+                      if (!isNaN(customTipValue) && customTipValue > 0) {
+                        onTipSelect(customTipValue);
+                      }
+                    }
+                  }}
+                />
+              </span>
             </Button>
           </label>
         </li>
