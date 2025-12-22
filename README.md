@@ -108,7 +108,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Git](https://github.com/shruticodes01/bill-splitter.git)
-- Live Site URL: [Deployed on Vercel](https://bill-splitter-one-eta.vercel.app/)
+- Live Site URL: [Bill Splitter](https://bill-splitter-one-eta.vercel.app/)
 
 ## My process
 
