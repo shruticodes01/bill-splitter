@@ -11,9 +11,9 @@ export default function TipSplitterContextProvider({
 }) {
   const [activeTip, setActiveTip] = useState<number | null>(null);
   const [userInput, setUserInput] = useState<InputData>({
-    billAmount: 0,
+    billAmount: "",
     custom: "Custom",
-    totalPersons: 0,
+    totalPersons: "",
   });
 
   const [error, setError] = useState<InputError>({});
@@ -28,8 +28,8 @@ export default function TipSplitterContextProvider({
     if (tip && Object.keys(inputError).length === 0) {
       const inputResults = calculateResults(
         tip,
-        userInput.billAmount,
-        userInput.totalPersons
+        userInput.billAmount as number,
+        userInput.totalPersons as number
       );
       console.log("inputResults:", inputResults);
       setError({});
@@ -67,9 +67,9 @@ export default function TipSplitterContextProvider({
 
   function handleReset() {
     setUserInput({
-      billAmount: 0,
+      billAmount: "",
       custom: "Custom",
-      totalPersons: 0,
+      totalPersons: "",
     });
 
     setResults({

@@ -27,7 +27,7 @@ export default function Input({ label }: { label: string }) {
 
       <div className="w-full h-12 flex justify-between items-center relative">
         <input
-          className={`w-full h-12 px-4 py-2 text-end bg-grey-50 text-green-900 text-lg leading-lg placeholder:text-grey-500 rounded-[.3125rem] focus:outline-2 focus:outline-green-400 focus:-outline-offset-1
+          className={`w-full h-12 px-4 py-2 text-end bg-grey-50 text-green-900 font-semibold text-lg leading-lg placeholder:text-grey-500 rounded-[.3125rem] focus:outline-2 focus:outline-green-400 focus:-outline-offset-1
               ${
                 errorMessage && "outline-2 outline-orange-400 -outline-offset-1"
               }`}

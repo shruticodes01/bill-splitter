@@ -22,7 +22,9 @@ export default function TipShare() {
             >
               <Button
                 className={`w-full h-12 text-lg leading-lg ${
-                  activeTip && "active:bg-grey-200 active:text-green-900"
+                  tip === activeTip
+                    ? "bg-grey-200 text-green-900"
+                    : "bg-green-900 text-white"
                 }`}
                 label={`${tip}%`}
                 variant={"tip"}

@@ -23,7 +23,7 @@ export default function Button({
   const base =
     "inline-flex items-center justify-center cursor-pointer rounded-[.3125rem] font-semibold";
   const variantClasses = {
-    tip: "px-4 py-2 bg-green-900 text-white text-lg leading-lg hover:bg-green-400 hover:text-green-900",
+    tip: "px-4 py-2 text-lg leading-lg hover:bg-green-400 hover:text-green-900",
     custom: "bg-grey-50 text-grey-500 text-lg leading-lg",
     reset: "px-8 py-2 bg-green-400 text-green-900 text-md leading-md",
   };

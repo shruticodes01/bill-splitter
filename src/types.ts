@@ -4,9 +4,9 @@ export type InputError = {
 };
 
 export interface InputData {
-  billAmount: number;
+  billAmount: string | number;
   custom?: string | number;
-  totalPersons: number;
+  totalPersons: string | number;
 }
 
 export interface ResultsData {
