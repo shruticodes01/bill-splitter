@@ -125,7 +125,7 @@ Users should be able to:
 ### What I learned
 
 Using Context to make the App component lean and to get rid of prop-drilling.
-If the tip button is already selected then genrating results upon user input using the onkeyup function attribute.
+If the tip button is already selected then generating results upon user input using the onkeyup function attribute.
 
 ### Continued development
 
