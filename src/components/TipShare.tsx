@@ -44,33 +44,32 @@ export default function TipShare() {
         })}
 
         <li className="w-full max-md:max-w-36.75 md:max-lg:max-w-34.5 lg:max-w-29">
-          <label className="w-full max-w-fit" htmlFor="custom">
-            <input
-              ref={customInputRef}
-              className="w-full max-w-fit h-12 text-lg leading-lg font-semibold bg-grey-50 text-green-900 text-center placeholder:text-grey-500 focus:outline-2 focus:outline-green-400 -outline-offset-2 rounded-[.3125rem]"
-              type="number"
-              inputMode="numeric"
-              id="custom"
-              name="custom"
-              value={userInput.custom?.toString() ?? ""}
-              placeholder="Custom"
-              onChange={onInputChange}
-              onSelect={(e: React.FocusEvent<HTMLInputElement>) => {
+          <label className="w-full max-w-fit" htmlFor="custom" />
+          <input
+            ref={customInputRef}
+            className="w-full max-w-fit h-12 text-lg leading-lg font-semibold bg-grey-50 text-green-900 text-center placeholder:text-grey-500 focus:outline-2 focus:outline-green-400 -outline-offset-2 rounded-[.3125rem]"
+            type="number"
+            inputMode="numeric"
+            id="custom"
+            name="custom"
+            value={userInput.custom?.toString() ?? ""}
+            placeholder="Custom"
+            onChange={onInputChange}
+            onSelect={(e: React.FocusEvent<HTMLInputElement>) => {
+              handleCustomTip(e);
+            }}
+            onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
+              handleCustomTip(e);
+            }}
+            onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
+              handleCustomTip(e);
+            }}
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
+              if (e.key === "Enter") {
                 handleCustomTip(e);
-              }}
-              onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
-                handleCustomTip(e);
-              }}
-              onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                handleCustomTip(e);
-              }}
-              onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                if (e.key === "Enter") {
-                  handleCustomTip(e);
-                }
-              }}
-            />
-          </label>
+              }
+            }}
+          />
         </li>
       </ul>
     </div>
