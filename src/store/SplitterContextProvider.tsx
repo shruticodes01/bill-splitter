@@ -31,7 +31,7 @@ export default function TipSplitterContextProvider({
         userInput.billAmount as number,
         userInput.totalPersons as number
       );
-      console.log("inputResults:", inputResults);
+
       setError({});
       setResults(() => inputResults);
     } else {
@@ -62,8 +62,6 @@ export default function TipSplitterContextProvider({
       computeResults(activeTip as number);
     }
   }
-
-  console.log(userInput.totalPersons);
 
   function handleReset() {
     setUserInput({

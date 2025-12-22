@@ -67,8 +67,6 @@ export default function TipShare() {
                   if (!isNaN(customTipValue) && customTipValue > 0) {
                     onTipSelect(customTipValue);
                   }
-
-                  console.log(e.target);
                 }}
                 onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
                   if (e.key === "Enter") {

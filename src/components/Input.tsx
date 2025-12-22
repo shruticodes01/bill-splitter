@@ -53,11 +53,10 @@ export default function Input({ label }: { label: string }) {
           }}
           onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
             const inputTargetValue = Number(e.currentTarget.value);
-            console.log(e.currentTarget);
+
             if (activeTip && inputTargetValue) {
               onCompute(activeTip);
             }
-            console.log(e.currentTarget);
           }}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
             if (e.key) {
