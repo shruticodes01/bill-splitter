@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useContext } from "react";
+import { useContext } from "react";
 import { TipSplitterContext } from "../store/tip-calc-context.tsx";
 import dollarIcon from "../assets/icon-dollar.svg";
 import personIcon from "../assets/icon-person.svg";
@@ -7,7 +7,6 @@ import personIcon from "../assets/icon-person.svg";
 export default function Input({ label }: { label: string }) {
   const { error, userInput, activeTip, onCompute, onInputChange } =
     useContext(TipSplitterContext);
-  const inputRef = useRef<HTMLInputElement | null>(null);
   const isBill = label === "Bill";
   const name = isBill ? "billAmount" : "totalPersons";
   const errorMessage = error?.[name];
@@ -31,7 +30,6 @@ export default function Input({ label }: { label: string }) {
               ${
                 errorMessage && "outline-2 outline-orange-400 -outline-offset-1"
               }`}
-          ref={inputRef}
           type="number"
           inputMode="numeric"
           id={name}
