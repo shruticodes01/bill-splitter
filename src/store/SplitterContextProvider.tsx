@@ -23,6 +23,8 @@ export default function TipSplitterContextProvider({
     amountPerPerson: 0,
   });
 
+  const [resetDisabled, setResetDisabled] = useState(true);
+
   function computeResults(tip: number) {
     const inputError = validateInput(userInput);
     if (tip && Object.keys(inputError).length === 0) {
@@ -34,12 +36,14 @@ export default function TipSplitterContextProvider({
 
       setError({});
       setResults(() => inputResults);
+      setResetDisabled(() => false);
     } else {
       setError(inputError);
       setResults({
         tipPerPerson: 0,
         amountPerPerson: 0,
       });
+      setResetDisabled(() => true);
       return;
     }
   }
@@ -81,6 +85,7 @@ export default function TipSplitterContextProvider({
     userInput: userInput,
     error: error,
     results: results,
+    resetDisabled: resetDisabled,
     onCompute: computeResults,
     onTipSelect: handleTipSelect,
     onInputChange: handleInputChange,

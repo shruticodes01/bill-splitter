@@ -13,6 +13,7 @@ export const TipSplitterContext = createContext<TipSplitterContextType>({
     tipPerPerson: 0,
     amountPerPerson: 0,
   },
+  resetDisabled: true,
   onCompute: () => {},
   onTipSelect: () => {},
   onInputChange: () => {},

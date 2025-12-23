@@ -19,6 +19,7 @@ export interface TipSplitterContextType {
   userInput: InputData;
   error: InputError;
   results: ResultsData;
+  resetDisabled: boolean;
   onCompute: (tip: number) => void;
   onTipSelect: (tip: number) => void;
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;

@@ -2,7 +2,7 @@ import React from "react";
 
 type Variant = "tip" | "custom" | "reset";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   label?: string;
   className?: string;
