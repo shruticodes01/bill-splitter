@@ -45,7 +45,7 @@ export default function TipShare() {
         })}
 
         <li className="w-full max-md:max-w-36.75 md:max-lg:max-w-34.5 lg:max-w-29">
-          <label className="w-full max-w-fit" htmlFor="custom">
+          <label className="w-full max-w-fit">
             <input
               ref={customInputRef}
               className="w-full max-w-fit h-12 text-lg leading-lg font-semibold bg-grey-50 text-green-900 text-center placeholder:text-grey-500 focus:outline-2 focus:outline-green-400 -outline-offset-2 rounded-[.3125rem]"
